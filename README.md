@@ -1,17 +1,20 @@
 # Repo for a debian single-machine OpenStack installer
-I'll try to make it as out-of-the-box as possible
+Hacked Devstack!
+I'll try to make of it as out-of-the-box as possible
 
-* Links followed:
-https://packages.debian.org/wheezy/openstack-dashboard
-http://docs.openstack.org/developer/devstack/
-http://docs.openstack.org/developer/devstack/configuration.html
-http://docs.openstack.org/developer/devstack/guides/single-machine.html
+*Links followed:*
+* https://wiki.debian.org/OpenStackHowto/Essex
+* https://packages.debian.org/wheezy/openstack-dashboard
+* https://wiki.debian.org/OpenStack
+* http://debian.netside.net/xps13_openstack.html
 
 _Actual official guide_
 http://docs.openstack.org/havana/install-guide/install/apt-debian/content/basics-networking.html
 
 mariaDB default password is 'root'
 stack default password is 'stack'
+
+Piece of code samplig local.conf
 ```bash
 [[local|localrc]]
 #Set FLOATING_RANGE to a range not used on the local network, i.e. 192.168.1.224/27. This configures IP addresses ending in 225-254 to be used as floating IPs.
