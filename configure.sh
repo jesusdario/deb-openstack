@@ -20,9 +20,10 @@ echo -e "$_BOLD$_BLUE Copying config files... $_RESET"
 mv sources.list /etc/apt
 
 
-echo -e "$_BOLD$_BLUE Updating software... $_RESET"
-apt-get update -y --force-yes || echo -e "$_BRED update failed" && exit
-apt-get upgrade -y --force-yes || echo -e "$_BRED upgrade failed" && exit
+# Maybe not necessary
+#echo -e "$_BOLD$_BLUE Updating software... $_RESET"
+#apt-get update -y --force-yes || echo -e "$_BRED update failed" && exit
+#apt-get upgrade -y --force-yes || echo -e "$_BRED upgrade failed" && exit
 
 # Note: I chose here to continue without a valid swap area
 
