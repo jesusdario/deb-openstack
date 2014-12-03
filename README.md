@@ -7,6 +7,9 @@ I'll try to make of it as out-of-the-box as possible
 * https://packages.debian.org/wheezy/openstack-dashboard
 * https://wiki.debian.org/OpenStack
 * http://debian.netside.net/xps13_openstack.html
+* More recomendations:*
+* http://ispire.me/installing-openstack-on-debian-wheezy-single-node/
+* http://docs.openstack.org/developer/devstack/guides/single-machine.html
 
 _Actual official guide_
 http://docs.openstack.org/havana/install-guide/install/apt-debian/content/basics-networking.html

@@ -45,3 +45,4 @@ echo -e "$_BOLD$_BLUE Installing python-mysqldb dependency $_RESET"
 apt-get install python-mysqldb -y --force-yes
 
 # Password for testing I use: root | root
+
