@@ -16,10 +16,10 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 echo -e "$_BOLD$_BLUE Copying config files... $_RESET"
+
+
 # Adding testing software for wheezy
-mv sources.list /etc/apt
-
-
+# mv sources.list /etc/apt
 # Maybe not necessary
 #echo -e "$_BOLD$_BLUE Updating software... $_RESET"
 #apt-get update -y --force-yes || echo -e "$_BRED update failed" && exit
@@ -28,8 +28,8 @@ mv sources.list /etc/apt
 # Note: I chose here to continue without a valid swap area
 
 echo -e "$_BOLD$_BLUE Installing qemu and libvirt-bin... $_RESET"
-apt-get install qemu -y --force-yes || echo -e "$_BRED Installation failed" && exit
-apt-get install libvirt-bin -y --force-yes || echo -e "$_BRED Installation failed" && exit
+apt-get install qemu -y --force-yes
+apt-get install libvirt-bin -y --force-yes
 
 
 echo -e "$_BOLD$_BLUE Accept first to install manually mariaDB $_RESET"
@@ -38,11 +38,10 @@ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
 sudo add-apt-repository 'deb http://tedeco.fi.upm.es/mirror/mariadb/repo/10.1/debian wheezy main'
 
 sudo apt-get update
-sudo apt-get install mariadb-server -y --force-yes || echo -e "$_BRED Installation failed" && exit
+sudo apt-get install mariadb-server -y --force-yes
+
+# Seems that this pkg is also needed!
+echo -e "$_BOLD$_BLUE Installing python-mysqldb dependency $_RESET"
+apt-get install python-mysqldb -y --force-yes
 
 # Password for testing I use: root | root
-
-# We have to start it...
-
-echo -e "$_BOLD$_BLUE Starting database server... $_RESET"
-service mysql start

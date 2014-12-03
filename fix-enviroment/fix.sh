@@ -17,10 +17,11 @@ fi
 rm /etc/apt/apt.conf.d/*proxies
 
 # Edit /etc/environmet to delete some lines
-mv environment /etc/environment
+cp environment /etc/environment
 
 # Update the repos
 apt-get update
+apt-get upgrade
 
 # Install git in order to be not clumpsy!
 apt-get install git -y --force-yes
