@@ -15,6 +15,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 rm /etc/apt/apt.conf.d/*proxies
+rm /etc/apt/preferences.d/*proxies
 
 # Edit /etc/environmet to delete some lines
 cp environment /etc/environment
