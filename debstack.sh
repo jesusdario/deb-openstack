@@ -36,6 +36,7 @@ apt-get install -y keystone
 # restart keystone is not mandatory
 
 echo -e "$_BOLD Switching to keystone.sh ... $_RESET"
+. keystone.sh # load variables
 ./keystone.sh
 # No changes in default_catalog.templates, I decided to leave
 # localhost as <mgmt.host>
@@ -43,6 +44,7 @@ echo -e "$_BOLD Switching to keystone.sh ... $_RESET"
 # no need to restart, then
 
 echo -e "$_BOLD Exporting user-variables ... $_RESET"
+. user-var.sh # export vars
 ./user-var.sh
 
 
@@ -110,23 +112,3 @@ apt-get install -y nova-console novnc
 apt-get install -y nova-compute nova-api nova-network nova-cert
 echo -e "$_BOLD$_GREEN Check services are up! $_RESET"
 nova-manage service list
-
-
-#
-## Using nova cli
-#
-echo -e "$_BOLD$_BLUE Using some commands... $_RESET"
-nova list
-nova image-list
-nova flavor-list
-nova keypair-list
-sleep 5
-
-echo -e "$_BOLD$_BLUE Setting image and flavours... $_RESET"
-# wget https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img
-# did this already, you can check it is in the repo
-IMG_ID=$(glance add name="cirrOS-0.3.0-x86_64" is_public=true container_format=bare disk_format=qcow2 distro="cirrOS-0.3.0-x86_64" < vm-images/cirros-0.3.0-x86_64-disk.img)
-# Trim it to just get the ID
-IMG_ID=$(echo ${IMG_ID##* })
-
-# to connect to it via SSH we will need to upload a public-key pair
