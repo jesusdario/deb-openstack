@@ -22,3 +22,6 @@ uninstall.sh
 * More recomendations:*
 * http://ispire.me/installing-openstack-on-debian-wheezy-single-node/
 * http://docs.openstack.org/developer/devstack/guides/single-machine.html
+
+This script was developed as a tutorial for Advanced Telematic Services
+at Universidad de Sevilla, by Jesús Darío Rivera Rubio.
