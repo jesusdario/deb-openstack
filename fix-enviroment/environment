@@ -1,13 +1,13 @@
 # Introduzca aqui sus datos de acceso a Internet
 # (no olvide borrarlos cuando termine)
-# Tras hacerlo, ejecute "source /etc/environment" para aplicarlos
-#USUARIO=""
-#CLAVE=""
+# Tras hacerlo, ejecute source /etc/environment para aplicarlos
+#USUARIO=
+#CLAVE=
 
 # Si se necesita introducir login y password
-# export http_proxy="http://${USUARIO}:${CLAVE}@localhost:3128"
-# export https_proxy="http://${USUARIO}:${CLAVE}@localhost:3128"
-# export ftp_proxy="http://${USUARIO}:${CLAVE}@localhost:3128"
+# export http_proxy=http://:@localhost:3128
+# export https_proxy=http://:@localhost:3128
+# export ftp_proxy=http://:@localhost:3128
 
 export _JAVA_OPTIONS=-Djava.net.preferIPv4Stack=true
 

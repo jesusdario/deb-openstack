@@ -20,11 +20,4 @@ rm /etc/apt/preferences.d/*proxies
 # Edit /etc/environmet to delete some lines
 cp environment /etc/environment
 
-# Update the repos
-apt-get update
-apt-get upgrade
-
-# Install git in order to be not clumpsy!
-apt-get install git -y --force-yes
-
-echo -e "$_BOLD$_BLUE done! $_RESET"
+echo -e "$_BOLD$_YELLOW You should reboot now!$_RESET"
