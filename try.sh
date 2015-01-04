@@ -5,19 +5,21 @@
 ## Script to try that the installation has been succesfull
 #
 #
+
+. load-var.sh
+
 echo -e "$_BOLD$_BLUE Using some commands... $_RESET"
 nova list
 nova image-list
 nova flavor-list
 nova keypair-list
-sleep 5
 
 echo -e "$_BOLD$_BLUE Setting image and flavours... $_RESET"
 # wget https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img
 # did this already, you can check it is in the repo
-IMG_ID=$(glance add name="cirrOS-0.3.0-x86_64" is_public=true container_format=bare disk_format=qcow2 distro="cirrOS-0.3.0-x86_64" < vm-images/cirros-0.3.0-x86_64-disk.img)
+export IMG_ID=$(glance add name="cirrOS-0.3.0-x86_64" is_public=true container_format=bare disk_format=qcow2 distro="cirrOS-0.3.0-x86_64" < vm-images/cirros-0.3.0-x86_64-disk.img)
 # Trim it to just get the ID
-IMG_ID=$(echo ${IMG_ID##* })
+export IMG_ID=$(echo ${IMG_ID##* })
 
 # to connect to it via SSH we will need to upload a public-key pair
 # ssh-keygen to create a key pair
