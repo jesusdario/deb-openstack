@@ -19,12 +19,12 @@ uninstall.sh
 * https://packages.debian.org/wheezy/openstack-dashboard
 * https://wiki.debian.org/OpenStack
 * http://debian.netside.net/xps13_openstack.html
-More recomendations:
+<br/><b>More recomendations:</b>
 * http://ispire.me/installing-openstack-on-debian-wheezy-single-node/
 * http://docs.openstack.org/developer/devstack/guides/single-machine.html
 
-I decided to include sublime-text 2 into the repo as I find it extremely light and useful.
-'vm-machines' stores a CirrOS disk image, a very light OS for testing.
+I decided to include sublime-text 2 into the repo as I find it extremely light and useful.The file
+'vm-machines' stores a CirrOS disk image, a very light OS for testing and
 'colors.sh' imports a series of variables to provide a colourful prompt.
 
 This script was developed as a tutorial for Advanced Telematic Services
